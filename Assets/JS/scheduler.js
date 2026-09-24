@@ -1,5 +1,5 @@
 var now = moment();
-$("#currentDay").text(now.format("MMM Do, YYYY HH:MM"));
+$("#currentDay").text(now.format("MMM Do, YYYY, h:mm a"));
 var blockContainer = document.getElementById("container");
 var startTime = 9;
 var endTime = 17;
@@ -40,6 +40,7 @@ for (var i = startTime; i < endTime + 1; i++) {
     } 
     textArea.setAttribute("rows", "3");
     saveBtn.textContent = "Save";
+    saveBtn.setAttribute("type", "button");
     saveBtn.setAttribute("class", "save-btn");
     saveBtn.setAttribute("id", "save-button-" + i);
     saveBtn.setAttribute("onclick", "saveData(this)");
